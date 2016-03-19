@@ -2,6 +2,8 @@ languageCode = "en-us"
 title = "Лис.пресс"
 theme = "hugo-lis"
 baseurl = "localhost:1313"
+newContentEditor = "vim"
+pygmentsStyle = "native"
 
 [params]
   maintitle = "Лис.пресс"
