@@ -1,0 +1,26 @@
+    {{ partial "header.html" . }}
+    <body>
+        <header class="article-head">
+            <div class="main-title">
+                <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Params.maintitle }}</a></h1>
+            </div>
+        </header>
+
+        <section id="wrapper">
+            <div class="container">
+                <div class="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-8">
+                    <article class="post">
+                        <header>
+                            <h4>Шаг {{ .Params.step }}</h4>
+                            <h1>{{ .Title }}</h1>
+                            <h3>{{ .Description }}</h3>
+                        </header>
+                        <section id="post-body">
+                            {{ .Content }}
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

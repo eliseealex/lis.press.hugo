@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="{{ with .Site.Params.author }}{{ . }}{{ end }}">
+		<meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
+		{{ .Hugo.Generator }}
+		<title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+
+		<!-- Full-listed styles -->
+		{{ partial "header-full-styles.html" . }}
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.min.css">
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/header.min.css">
+		<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/fonts.min.css">
+
+		{{ if .Site.Params.enableRSS }}
+		<link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+		{{ end }}
+	</head>
