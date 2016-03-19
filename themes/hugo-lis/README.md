@@ -26,7 +26,7 @@ git clone theme/hugo-lis
 - Google analytics.
 - Social share buttons.
 - Dynomize system.
-- Upload first version.	
 - Make lovely list.
 — Add twitter call to action.
-— Add footer.
+- Add footer.
+- Attribute for factoid (for example margin-left -100px;).

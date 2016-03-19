@@ -3,23 +3,13 @@ var gulp         = require('gulp'),
 		autoprefixer = require('gulp-autoprefixer'),
 		minifycss    = require('gulp-minify-css'),
 		rename       = require('gulp-rename'),
-		browserSync  = require('browser-sync').create(),
 		concat       = require('gulp-concat'),
 		uglify       = require('gulp-uglifyjs');
-
-gulp.task('browser-sync', ['styles', 'scripts'], function() {
-		browserSync.init({
-				server: {
-						baseDir: "./layout"
-				},
-				notify: false
-		});
-});
 
 gulp.task('styles', function () {
 	return gulp.src('src/sass/*.sass')
 	.pipe(sass({
-		includePaths: require('node-bourbon').includePaths
+		includePaths: require('bourbon').includePaths
 	}).on('error', sass.logError))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
@@ -43,9 +33,6 @@ gulp.task('scripts', function() {
 gulp.task('watch', function () {
 	gulp.watch('src/sass/*.sass', ['styles']);
 	gulp.watch('static/libs/**/*.js', ['scripts']);
-	gulp.watch('static/js/*.js').on("change", browserSync.reload);
-	gulp.watch('app/*.html').on('change', browserSync.reload);
-	gulp.watch('app/**/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch']);

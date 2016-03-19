@@ -4,6 +4,7 @@ theme = "hugo-lis"
 baseurl = "localhost:1313"
 newContentEditor = "vim"
 pygmentsStyle = "native"
+googleAnalytics = "UA-74408540-1"
 
 [params]
   maintitle = "Лис.пресс"
