@@ -57,8 +57,13 @@
                         </p>
                     </div>
                     <div class="col-sm-3">
-                        <h2>Автор</h2>
-                        <p>{{ .Site.Params.author }}</p>
+                        <p>
+                            {{ .Site.Params.author }} 
+                            <br>
+
+                            <a href="mailto:{{ .Site.Params.authoremail }}?Subject={{ .Site.Title }}" rel="nofollow">
+                            {{ .Site.Params.authoremail }}</a>
+                        </p>
                     </div>
                 </div>
             </div>
