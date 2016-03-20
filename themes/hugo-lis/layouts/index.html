@@ -14,11 +14,13 @@
                         <h4>Эксперимент</h4>
                         <h2>Создание блога</h2>
                     </div>
-                    <div class="col-xs-6 col-md-2 experiment-step">
-                        <p>Шаг 1</p>
-                        <h4><a href="/project/lispress/1-hypothesis/">Гипотезы</a></h4>
-                        <p>Для чего нужна ещё одна платформа для блогов?</p>
-                    </div>
+                    {{ range first 3 (where .Data.Pages "Section" "lispress") }}
+                        <div class="col-xs-6 col-md-2 experiment-step">
+                            <p>Шаг {{ .Params.step }}</p>
+                            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                            <p>{{ .Description }}</p>
+                        </div>
+                    {{ end }}
                 </div>
             </div>
         </div>
