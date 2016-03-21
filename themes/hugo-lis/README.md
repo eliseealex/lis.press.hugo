@@ -21,7 +21,6 @@ git clone https://github.com/eliseealex/hugo-lis
 
 ## What's next?
 - Add seo meta tags.
-- RSS.
 - Create a good guidelines based on definitions.
 - Google analytics.
 - Social share buttons.

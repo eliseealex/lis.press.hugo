@@ -17,6 +17,11 @@
                             <h1>{{ .Title }}</h1>
                             <h3>{{ .Description }}</h3>
                         </header>
+
+                        <div class="content">
+                            <h2>Оглавление</h2>
+                            {{ .TableOfContents }}
+                        </div>
                         <section id="post-body">
                             {{ .Content }}
                         </section>

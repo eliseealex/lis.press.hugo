@@ -6,8 +6,8 @@ license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
 description = "Rubric blog theme"
 homepage = "http://siteforthistheme.com/"
-tags = ["", ""]
-features = ["landing", "blog"]
+tags = ["rss", ""]
+features = ["landing", "blog", "rss"]
 min_version = 0.14
 
 [author]
