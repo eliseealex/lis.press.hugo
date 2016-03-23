@@ -20,8 +20,9 @@ git clone https://github.com/eliseealex/hugo-lis
 ```
 
 ## What's next?
-- Check spaces around table of content and font size.
+- Use maintitle as head->title at index.html
 - Add seo meta tags.
+- 404.
 - Create a good guidelines based on definitions.
 - Google analytics.
 - Social share buttons.
