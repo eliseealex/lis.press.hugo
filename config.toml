@@ -9,9 +9,13 @@ googleAnalytics = "UA-74408540-1"
 [params]
   maintitle = "Лис.пресс"
   mainsubtitle = "Эксперименты с business-aware разработкой"
-  description = "Лис.пресс — платформа для обмена опытом в создании и продвижении интернет-проектов"
-  author = "Александр Елисеев"
-  authoremail = "eliseealex@gmail.com"
+  description = "Лис.пресс — это сайт, где программисты пишут об опыте применения знаний на примере реальных проектов. <br>Мы открыты для критики и для новых участников, **пишите нам**."
+
+  authorEmail = "mailbox@lis.press"
+  authorTwitter = "lispressru"
+
   enableTableOfContent = true
-  enablePath = true
+  enablePath = false
   enableAnalytic = false
+
+  yandexMetrika = "36272730"

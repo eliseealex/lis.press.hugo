@@ -1,3 +1,21 @@
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-4">
+   				<p><strong>Пишите</strong> если нашли ошибку или понравилась статья.</p>
+   					{{ partial "social.html" . }}
+            </div>
+
+            <div class="col-sm-offset-4 col-sm-2">
+   				<p>Автор:<br><mark>{{ .Params.author }}</mark></p>
+   				<p>Дата:<br><mark>{{ .Date.Format "2.01.2006" }}</mark></p>
+            </div>
+        </div>
+	 </div>
+</footer>
+
+
 {{ if .Site.Params.enableAnalytic }}
 	{{ template "_internal/google_analytics.html" . }} 
 			

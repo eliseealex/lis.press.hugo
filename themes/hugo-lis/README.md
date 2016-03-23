@@ -20,15 +20,13 @@ git clone https://github.com/eliseealex/hugo-lis
 ```
 
 ## What's next?
+- Check spaces around table of content and font size.
 - Add seo meta tags.
 - Create a good guidelines based on definitions.
 - Google analytics.
 - Social share buttons.
 - Dynomize system.
-- Make lovely list.
 — Add twitter call to action.
-- Add footer.
 - Attribute for factoid (for example margin-left -100px;).
-- Table of contents?
-- Lighter text color!
 - Add github, hypothesis and roadmap link on index.
+- Make components for index page constructor.

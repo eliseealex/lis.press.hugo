@@ -1,0 +1,14 @@
+ <p>
+        {{ if .Site.Params.authorTwitter }}
+            <p><a href="https://twitter.com/{{ .Site.Params.authorTwitter }}"><i class="fa fa-twitter"></i> @{{ .Site.Params.authorTwitter }}</a></p>
+        {{ end }}
+
+        {{ if .Site.Params.authorEmail }}
+            <p>
+            	<a href="mailto:{{ .Site.Params.authorEmail }}?Subject={{ .Site.Title }}" rel="nofollow">
+            		<i class="fa fa-envelope"></i> {{ .Site.Params.authorEmail }}
+            	</a>
+        	</p>
+        {{ end }}
+
+    </p>

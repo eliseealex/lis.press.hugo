@@ -1,18 +1,25 @@
-# (Lis.press)[lis.press] repository
+# Lis.press repository
 
-## What's next.
+## How does it works?
 
-### Call to action
-- Нужно добавить email, twitter и хештег в твиттере.
-- Сделать под статьёй панельку с жизненным путём моего сайта.
+I have a copy of this git repository on my virtual server on Digital Ocean. 
 
-### Articles
-#### Text
-- https://www.youtube.com/watch?v=mZXLocPkgXA Интерактивная статья. Вебинар для студентов второго набора Школы редакторов. Великолепный материал.
-- Разобрать вебинары Максима Ильяхова.
-- Сделать плашку в статье про гипотезы.
+I use static generation to the `/public` directory and expose it with NGinx.
 
-## Done
+### Updates
+Every time I need to update my site i pull my changes:
+```
+git pull
+```
 
-### Hosting
-- Place hugo behind NGinx. It'll be very ease, i can generate every time i need my site to /public repository and simply host it.
+If i changed my config and there were **conflicts** in commit i stash changes, pull and then unstash:
+```
+git stash
+git pull
+git stash pop
+```
+
+And then I generate my static site:
+```
+hugo
+```

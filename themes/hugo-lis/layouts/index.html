@@ -58,29 +58,23 @@
             </div>
         </div>
 
-        <div class="rubric">
+        <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
-                        <h2>Кто мы такие?</h2>
+                        <h2>Куда я попал?</h2>
                     </div>
                     <div class="col-sm-5">
                         <p>
-                            {{ .Site.Params.description }}
+                            {{ .Site.Params.description | markdownify}}
                         </p>
                     </div>
-                    <div class="col-sm-3">
-                        <p>
-                            {{ .Site.Params.author }} 
-                            <br>
+                    <div class="col-lg-offset-1 col-lg-2 col-sm-3">
+                            {{ partial "social" . }}
+                    </div>
 
-                            <a href="mailto:{{ .Site.Params.authoremail }}?Subject={{ .Site.Title }}" rel="nofollow">
-                            {{ .Site.Params.authoremail }}</a>
-                        </p>
-                    </div>
                 </div>
-            </div>
-        </div>
-        {{ partial "footer.html" . }}
+             </div>
+        </footer>
     </body>
 </html>

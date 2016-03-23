@@ -19,13 +19,13 @@
                         </header>
 
                         {{ if .Site.Params.enableTableOfContent }}
-                        <div class="content">
-                            <h2>Оглавление</h2>
+                        <div class="table-of-content">
+                            <h3>Оглавление</h3>
                             {{ .TableOfContents }}
                         </div>
                         {{ end }}
 
-                        <section id="post-body">
+                        <section id="post-body" class="post-body">
                             {{ .Content }}
                         </section>
 
