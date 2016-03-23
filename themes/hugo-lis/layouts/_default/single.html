@@ -18,20 +18,26 @@
                             <h3>{{ .Description }}</h3>
                         </header>
 
-                        <!-- <div class="content">
+                        {{ if .Site.Params.enableTableOfContent }}
+                        <div class="content">
                             <h2>Оглавление</h2>
                             {{ .TableOfContents }}
-                        </div> -->
+                        </div>
+                        {{ end }}
+
                         <section id="post-body">
                             {{ .Content }}
                         </section>
 
-                        <!-- <div class="path">
+
+                        {{ if .Site.Params.enablePath }}
+                        <div class="path">
                             <h2>Полный путь</h2>
-                            {{ range where .Site.Pages "Section" "lispress" }}
+                            {{ range where .Site.Pages "Section" .Section }}
                                  <p><a href="{{ .Permalink }}">Шаг {{ .Params.step }} {{ .Title }}</a></p>
                             {{ end }}
-                        </div> -->
+                        </div>
+                        {{ end }}
                     </article>
                 </div>
             </div>

@@ -12,3 +12,6 @@ googleAnalytics = "UA-74408540-1"
   description = "Лис.пресс — платформа для обмена опытом в создании и продвижении интернет-проектов"
   author = "Александр Елисеев"
   authoremail = "eliseealex@gmail.com"
+  enableTableOfContent = true
+  enablePath = true
+  enableAnalytic = false
