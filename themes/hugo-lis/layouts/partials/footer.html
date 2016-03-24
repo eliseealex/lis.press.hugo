@@ -1,18 +1,16 @@
 
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-offset-2 col-sm-4">
-   				<p><strong>Пишите</strong>, если нашли ошибку или понравилась статья.</p>
-   					{{ partial "social.html" . }}
-            </div>
-
-            <div class="col-sm-offset-4 col-sm-2">
-   				<p>Автор:<br>{{ .Params.author }}</p>
-   				<p>Дата:<br>{{ .Date.Format "2.01.2006" }}</p>
-            </div>
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-4">
+				<p><strong>Пишите</strong>, если нашли ошибку или понравилась статья.</p>
+					{{ partial "social.html" . }}
         </div>
-	 </div>
+
+        <div class="col-sm-offset-4 col-sm-2">
+				<p>Автор:<br>{{ .Params.author }}</p>
+				<p>Дата:<br>{{ .Date.Format "2.01.2006" }}</p>
+        </div>
+    </div>
 </footer>
 
 

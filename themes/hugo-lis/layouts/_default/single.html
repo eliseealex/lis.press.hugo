@@ -1,4 +1,16 @@
-    {{ partial "header.html" . }}
+    {{ partial "header-start.html" . }}
+
+        <title>{{ .Title }}. Шаг {{ .Params.step }} &middot; {{ .Site.Title }}</title>
+
+        <meta name="description" content="{{ .Description }}">
+        <meta name="author" content="{{ .Params.author }}">
+        <meta name="keywords" content="{{ .Params.metakeywords }}">
+
+        <link href="{{ .Node.RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+        <link href="{{ .Node.RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+    {{ partial "header-end.html" . }}
+
     <body>
         <header class="article-head">
             <div class="main-title">
@@ -8,8 +20,8 @@
 
         <section id="wrapper">
             <div class="container">
-                <div class="col-md-offset-2 col-md-8">
-                    <article class="post">
+                <article class="post">
+                    <div class="col-md-offset-2 col-md-8">
                         <header>
                             <h4>
                                 Шаг {{ .Params.step }}
@@ -24,25 +36,25 @@
                             {{ .TableOfContents }}
                         </div>
                         {{ end }}
+                    </div>
 
-                        <section id="post-body" class="post-body">
+                    <div class="col-md-offset-2 col-md-8 post-body">
+                        <section id="post-body">
                             {{ .Content }}
                         </section>
+                    </div>
 
-
-                        {{ if .Site.Params.enablePath }}
-                        <div class="path">
-                            <h2>Полный путь</h2>
-                            {{ range where .Site.Pages "Section" .Section }}
-                                 <p><a href="{{ .Permalink }}">Шаг {{ .Params.step }} {{ .Title }}</a></p>
+                    {{ if .Site.Params.enablePath }}
+                        <div class="col-md-2 path">
+                            {{ range where .Site.Pages.ByDate "Section" .Section }}
+                                 <p>Шаг {{ .Params.step }} <br><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                             {{ end }}
                         </div>
-                        {{ end }}
-                    </article>
-                </div>
+                    {{end}}
+                </article>
+        
+                {{ partial "footer.html" . }}
             </div>
         </section>
-        
-        {{ partial "footer.html" . }}
     </body>
 </html>

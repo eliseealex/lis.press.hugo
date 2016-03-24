@@ -10,12 +10,13 @@ googleAnalytics = "UA-74408540-1"
   maintitle = "Лис.пресс"
   mainsubtitle = "Эксперименты с business-aware разработкой"
   description = "Лис.пресс — это сайт, где программисты пишут об опыте применения знаний на примере реальных проектов. <br>Мы открыты для критики и для новых участников, **пишите нам**."
+  metaKeywords = "Business-aware разработка, open-source, lean startup, маркетинг, ux, блог, примеры"
 
   authorEmail = "mailbox@lis.press"
   authorTwitter = "lispressru"
 
   enableTableOfContent = true
-  enablePath = false
+  enablePath = true
   enableAnalytic = false
 
   yandexMetrika = "36272730"
