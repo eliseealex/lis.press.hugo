@@ -28,8 +28,8 @@
                                 Шаг {{ .Params.step }}
                             </h4>
                             {{ end }}
-                            <h1>{{ .Title }}</h1>
-                            <h3>{{ .Description }}</h3>
+                            <h1>{{ .Title | markdownify}}</h1>
+                            <h3>{{ .Description | markdownify }}</h3>
                         </header>
 
                         {{ if .Site.Params.enableTableOfContent }}
@@ -46,13 +46,24 @@
                         </section>
                     </div>
 
-                    {{ if .Site.Params.enablePath }}
+                    {{ if and .Site.Params.enablePath .Params.sidebarhistory }}
                         <div class="col-md-2 path">
                             {{ range where .Site.Pages.ByDate "Section" .Section }}
                                  <p>Шаг {{ .Params.step }} <br><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                             {{ end }}
+
+                            <p style="margin-top: 2em"><a href="/{{ .Section }}"><i class="fa fa-map-signs"></i> Дорожная карта</a></p>
                         </div>
-                    {{end}}
+                    {{ end }}
+
+                    <div class="col-md-8 col-md-offset-2">
+                        <!-- TODO extract to new template -->
+                        {{ if .Params.projectroadmap }}
+                            {{ range where .Site.Pages.ByDate "Section" .Params.projectroadmap }}
+                                    <p>Шаг {{ .Params.step }} <a href="{{ .Permalink }}">{{ .Title }}</a></p>
+                            {{ end }}
+                        {{ end }}
+                    </div>
                 </article>
         
                 {{ partial "article-footer.html" . }}

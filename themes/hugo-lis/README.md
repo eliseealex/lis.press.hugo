@@ -20,6 +20,7 @@ git clone https://github.com/eliseealex/hugo-lis
 ```
 
 ## What's next?
+- Make special steps.
 - RSS on project.
 - 404.
 - Create a good guidelines based on definitions.

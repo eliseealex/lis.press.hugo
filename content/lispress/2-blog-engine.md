@@ -5,6 +5,7 @@ description = "Как выбрать платформу для блогов? CM
 metakeywords = "Blog engine, платформа для блогов, выбор, что выбрать, cms, генератор статических сайтов, wordpress, hugo, ghost"
 step = "2"
 author = "Александр Елисеев"
+sidebarhistory = true
 +++
 
 Я продолжаю создание [иерархической платформы для блогов по методологии Lean](https://lis.press/lispress/1-hypothesis/).
