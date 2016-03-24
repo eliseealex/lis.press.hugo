@@ -15,7 +15,7 @@ googleAnalytics = "UA-74408540-1"
   authorEmail = "mailbox@lis.press"
   authorTwitter = "lispressru"
 
-  enableTableOfContent = true
+  enableTableOfContent = false
   enablePath = true
   enableAnalytic = false
 

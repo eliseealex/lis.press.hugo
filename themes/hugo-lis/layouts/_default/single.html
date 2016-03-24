@@ -23,9 +23,11 @@
                 <article class="post">
                     <div class="col-md-offset-2 col-md-8">
                         <header>
+                            {{ if .Params.step }}
                             <h4>
                                 Шаг {{ .Params.step }}
                             </h4>
+                            {{ end }}
                             <h1>{{ .Title }}</h1>
                             <h3>{{ .Description }}</h3>
                         </header>
