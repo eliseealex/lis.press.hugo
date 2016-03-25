@@ -21,6 +21,7 @@ git clone https://github.com/eliseealex/hugo-lis
 
 ## What's next?
 - Make special steps.
+- Add link on description.
 - RSS on project.
 - 404.
 - Create a good guidelines based on definitions.
