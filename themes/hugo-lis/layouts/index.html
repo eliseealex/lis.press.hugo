@@ -19,24 +19,6 @@
             </div>
         </header>
 
-        <div class="experiment experiment-running">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 experiment-title">
-                        <h4> </h4>
-                        <h2><a href="/hackday-41">Hackay 41</a> (Live)</h2>
-                    </div>
-                    {{ range first 3 (where .Data.Pages "Section" "hackday-41") }}
-                        <div class="col-xs-6 col-md-2 experiment-step">
-                            <p>Шаг {{ .Params.step }}</p>
-                            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-                            <p>{{ .Description }}</p>
-                        </div>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-
         <div class="experiment">
             <div class="container">
                 <div class="row">
@@ -44,24 +26,13 @@
                         <h4> </h4>
                         <h2><a href="/lispress">Создание блога</a></h2>
                     </div>
-                    {{ range first 3 (where .Data.Pages "Section" "lispress") }}
+                    {{ range first 4 (where .Data.Pages "Section" "lispress") }}
                         <div class="col-xs-6 col-md-2 experiment-step">
                             <p>Шаг {{ .Params.step }}</p>
                             <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
                             <p>{{ .Description }}</p>
                         </div>
                     {{ end }}
-
-                    <div class="col-xs-6 col-md-2 experiment-step" style="background-color: rgba(245, 166, 35, 0.12);">
-                        <p>Шаг 1</p>
-                        <h4><a href="/lispress/1-hypothesis/">Гипотезы</a></h4>
-                        <p>
-                            В чём суть эксперимента?
-                        </p>
-                        <p>
-                            Для чего нужна ещё одна платформа для блогов?
-                        </p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -84,6 +55,24 @@
                         <p><small>Эрик Рис</small></p>
                         <p><small><a href="http://www.alpinabook.ru/">Альпина Паблишер</a>, 2015</small></p>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="experiment">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 experiment-title">
+                        <h4> </h4>
+                        <h2><strike><a href="/hackday-41">Hackay 41</a></strike> Failed</h2>
+                    </div>
+                    {{ range first 3 (where .Data.Pages "Section" "hackday-41") }}
+                        <div class="col-xs-6 col-md-2 experiment-step">
+                            <p>Шаг {{ .Params.step }}</p>
+                            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                            <p>{{ .Description }}</p>
+                        </div>
+                    {{ end }}
                 </div>
             </div>
         </div>

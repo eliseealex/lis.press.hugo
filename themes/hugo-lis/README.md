@@ -20,6 +20,7 @@ git clone https://github.com/eliseealex/hugo-lis
 ```
 
 ## What's next?
+- Path is ugly in small screens.
 - Make special steps.
 - Add link on description.
 - RSS on project.

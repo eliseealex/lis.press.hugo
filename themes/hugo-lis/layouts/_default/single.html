@@ -56,16 +56,16 @@
                         </div>
                     {{ end }}
 
-                    <div class="col-md-8 col-md-offset-2">
-                        <!-- TODO extract to new template -->
-                        {{ if .Params.projectroadmap }}
-                            {{ range where .Site.Pages.ByDate "Section" .Params.projectroadmap }}
-                                    <p>Шаг {{ .Params.step }} <a href="{{ .Permalink }}">{{ .Title }}</a></p>
-                            {{ end }}
-                        {{ end }}
-                    </div>
+
+                    {{ if .Params.projectroadmap }}
+                      <div class="col-md-8 col-md-offset-2">
+                          <!-- TODO extract to new template -->
+                              {{ range where .Site.Pages.ByDate "Section" .Params.projectroadmap }}
+                                      <p>Шаг {{ .Params.step }} <a href="{{ .Permalink }}">{{ .Title }}</a></p>
+                              {{ end }}
+                      </div>
+                    {{ end }}
                 </article>
-        
                 {{ partial "article-footer.html" . }}
                 {{ partial "analytic.html" . }}
             </div>
