@@ -50,40 +50,33 @@ h4
 
 //Custom Styles Here
 .main-head
-	position: relative
-	width: 100%
-	color: #fff
-	min-height: 350px
 	text-align: center
-	background-image: url(/image/header-bg.jpeg)
-	background-image: -webkit-image-set(url(/image/header-bg.jpeg) 1x, url(/image/header-bg-2x.jpeg) 2x);
-	vertical-align: center
-	background-size: cover
-	background-position: 50% 20%
-	&::before
-		@extend .before
-		opacity: .50
-		background-color: #000
 	h1,
 	h2
 		margin: 0
 		position: relative
 		line-height: 1.325em
 	h1
-		padding-top: 150px
+		padding-top: 70px
 		font-size: 3em
-		letter-spacing: 1.5px
+		letter-spacing: 3px
+		text-transform: uppercase
+	h2
+		padding-bottom: 43px
+		color: #4442C2
 
 .article-head
 	@extend .main-head
-	min-height: 200px
 	h1
-		padding-top: 80px
-	a,
+		padding-top: 70px
+		padding-bottom: 43px
+	a
+		color: #4442C2
 	a:hover,
 	a:active,
 	a:focus
-		color: inherit
+		color: #16148D
+		text-decoration: none
 
 .experiment
 	a
@@ -108,9 +101,14 @@ h4
 		line-height: 1em
 
 .experiment-title
+	a
+		color: #4442C2
+	a:hover,
+	a:active,
+	a:focus
+		color: #16148D
 	h4
 		margin-bottom: 0
-		color: #F5A623
 
 .rubric
 	margin-top: 3em
@@ -124,7 +122,8 @@ h4
 	img
 		width: 80%
 		max-width: 200px
-		box-shadow: 0.1px 0.1px 0.1px
+		box-shadow: 0 0 7px rgba(0,0,0,.36)
+		margin-bottom: 30px
 
 .post
 	font-size: 17px

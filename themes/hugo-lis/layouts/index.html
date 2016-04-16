@@ -80,16 +80,14 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-md-4 col-sm-6">
                         <h2>Куда я попал?</h2>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-6">
                         <p>
                             {{ .Site.Params.description | markdownify}}
-                        </p>
-                    </div>
-                    <div class="col-lg-offset-1 col-lg-2 col-sm-3">
                             {{ partial "social" . }}
+                        </p>
                     </div>
 
                 </div>
