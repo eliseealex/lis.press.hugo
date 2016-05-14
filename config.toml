@@ -1,15 +1,15 @@
 languageCode = "en-us"
 title = "Блог Александра Елисеева"
 theme = "hugo-lis"
-baseurl = "//eliseealex.me"
+baseurl = "http://eliseealex.me"
 newContentEditor = "vim"
 pygmentsStyle = "native"
-googleAnalytics = "UA-74408540-1"
+googleAnalytics = "UA-74408540-2"
 
 [params]
   maintitle = "EliseeAlex.me"
   mainsubtitle = "Блог о business-aware разработке"
-  description = "[EliseeAlex.me](//eliseealex.me) — мой личный блог.<br> **Пишите**, я открыт для критики и предложений."
+  description = "**Пишите**, я открыт для критики и предложений."
   metaKeywords = "Business-aware разработка, open-source, lean startup, маркетинг, ux, блог, примеры"
 
   authorEmail = "eliseealex@gmail.com"
@@ -17,6 +17,6 @@ googleAnalytics = "UA-74408540-1"
 
   enableTableOfContent = false
   enablePath = true
-  enableAnalytic = false
+  enableAnalytic = true
 
-  yandexMetrika = "36272730"
+  yandexMetrika = "37008430"

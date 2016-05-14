@@ -21,12 +21,10 @@
         <section id="wrapper">
             <div class="container">
                 <article class="post">
-                    <div class="col-md-offset-2 col-md-8">
+                    <div class="col-md-offset-2 col-md-7">
                         <header>
                             {{ if .Params.step }}
-                            <h4>
-                                Шаг {{ .Params.step }}
-                            </h4>
+                              Шаг {{ .Params.step }}
                             {{ end }}
                             <h1>{{ .Title | markdownify}}</h1>
                             <h3>{{ .Description | markdownify }}</h3>
@@ -40,29 +38,32 @@
                         {{ end }}
                     </div>
 
-                    <div class="col-md-offset-2 col-md-8 post-body">
+                    <div class="col-md-offset-2 col-md-7 post-body">
+
+                        {{ if and .Site.Params.enablePath .Params.sidebarhistory }}
+                            <div class="factoid">
+                                {{ range where .Site.Pages.ByDate "Section" .Section }}
+                                     <p>Шаг {{ .Params.step }} <br><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+                                {{ end }}
+
+                                <p style="margin-top: 2em"><a href="/{{ .Section }}"><i class="fa fa-map-signs"></i> Дорожная карта</a></p>
+                            </div>
+                        {{ end }}
+
                         <section id="post-body">
                             {{ .Content }}
                         </section>
                     </div>
 
-                    {{ if and .Site.Params.enablePath .Params.sidebarhistory }}
-                        <div class="col-md-2 path">
-                            {{ range where .Site.Pages.ByDate "Section" .Section }}
-                                 <p>Шаг {{ .Params.step }} <br><a href="{{ .Permalink }}">{{ .Title }}</a></p>
-                            {{ end }}
-
-                            <p style="margin-top: 2em"><a href="/{{ .Section }}"><i class="fa fa-map-signs"></i> Дорожная карта</a></p>
-                        </div>
-                    {{ end }}
-
-
                     {{ if .Params.projectroadmap }}
-                      <div class="col-md-8 col-md-offset-2">
-                          <!-- TODO extract to new template -->
-                              {{ range where .Site.Pages.ByDate "Section" .Params.projectroadmap }}
-                                      <p>Шаг {{ .Params.step }} <a href="{{ .Permalink }}">{{ .Title }}</a></p>
-                              {{ end }}
+                      <div class="col-md-offset-2 col-md-7 post-body">
+                        {{ range where .Site.Pages.ByDate "Section" .Params.projectroadmap }}
+                            <div class="col-sm-6 experiment-step">
+                                <p>Шаг {{ .Params.step }}</p>
+                                <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                                <p>{{ .Description }}</p>
+                            </div>
+                        {{ end }}
                       </div>
                     {{ end }}
                 </article>

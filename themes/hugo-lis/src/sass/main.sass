@@ -36,9 +36,12 @@ body
 
 h1,
 h2,
-h3,
-h4
+h3
 	font-weight: normal
+
+h4
+	font-weight: bold
+	font-size: 1em
 
 .before
 	content: ''
@@ -57,19 +60,15 @@ h4
 		position: relative
 		line-height: 1.325em
 	h1
-		padding-top: 70px
+		padding-top: 70px * $phi
+		padding-bottom: 70px
 		font-size: 3em
 		letter-spacing: 3px
 		text-transform: uppercase
-	h2
-		padding-bottom: 43px
 		color: #4442C2
 
 .article-head
 	@extend .main-head
-	h1
-		padding-top: 70px
-		padding-bottom: 43px
 	a
 		color: #4442C2
 	a:hover,
@@ -79,6 +78,7 @@ h4
 		text-decoration: none
 
 .experiment
+	margin-bottom: 70px / $phi
 	a
 		text-decoration: none
 	h2,
@@ -86,7 +86,7 @@ h4
 		margin-top: 0
 		line-height: 1em
 	p
-		margin-bottom: 0
+		margin-top: 0
 
 .experiment-running
 	background-color: rgba(115, 229, 255, 0.12)
@@ -96,9 +96,13 @@ h4
 	padding-bottom: 1.33em
 	p
 		margin-top: 1.33em
+		margin-bottom: 0
 	h4
+		font-weight: normal
 		margin-top: 0
 		line-height: 1em
+	a
+		color: #4442C2
 
 .experiment-title
 	a
@@ -126,7 +130,6 @@ h4
 		margin-bottom: 30px
 
 .post
-	font-size: 17px
 	margin-bottom: 2em
 	header
 		margin-top: 2em
@@ -151,6 +154,13 @@ h4
 
 	ul li:before
 	 content: "— "
+
+.factoid
+	width: 180px
+	left: 100%
+	margin-left: 4em
+	position: absolute
+	font-size: 0.85em
 
 .table-of-content
 	margin-bottom: 3.3em

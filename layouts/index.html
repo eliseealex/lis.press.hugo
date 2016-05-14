@@ -1,0 +1,88 @@
+	{{ partial "header-start.html" . }}
+
+        <title>{{ .Site.Params.mainsubtitle }} &middot; {{ .Site.Params.maintitle }}</title>
+
+        <meta name="keywords" content="{{ .Site.Params.metaKeywords }}">
+        <meta name="description" content="{{ with .Site.Params.description | markdownify }}{{ . }}{{ end }}">
+        <meta name="author" content="{{ with .Site.Params.author }}{{ . }}{{ end }}">
+
+        <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+        <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+    {{ partial "header-end.html" . }}
+
+	<body>
+	    <header class="main-head">
+	        <div class="main-title">
+	            <h1>{{ .Site.Params.maintitle }}</h1>
+	        </div>
+	    </header>
+
+			<div class="container">
+        <div class="experiment row">
+					<div class="col-md-8 col-md-offset-2 about">
+						<p>
+							Привет! Я — Александр Елисеев.
+						</p>
+						<p>
+							Я программирую, запускаю домашние проекты, люблю путешествовать и катаюсь на <a href="https://www.instagram.com/p/BEd72PiEOag/?taken-by=mreliseev">складном велосипеде</a>.
+						</p>
+						<p>
+							Я работаю программистом в большом проекте и видел немало граблей. В основном я пишу на java, но у меня есть скромный опыт в js и scala.
+						</p>
+						<p>
+							В свободное от работы время помогаю с проектами в <a href="https://ifmo.su">CodeX</a>.
+						</p>
+						<p>
+							Люблю хорошие тексты и удобный дизайн. Уважаю и читаю людей, чьё творчество мне нравится.
+						</p>
+					</div>
+				</div>
+
+        <div class="experiment row">
+          <div class="col-md-offset-2 col-md-8 experiment-title">
+            <h2>Мои проекты</h2>
+						<p>
+							Сейчас я работаю над сервисом <a href="/dynamica-1">статисики для блогов</a>.
+							На примере него я расскажу об основах работы со scala и akka.
+						</p>
+						<p>
+							До этого я уже рассказал о попытке создания <a href="/lispress">платформы для презентации результатов работ</a>
+							и <a href="/hackday-41">приложения для сбора статистики</a>.
+							Мне не удалось довести их до конца. Я взялся за слишком большое дело и заблудился в деталях.
+							Тем не менее, они оказались очень полезными.
+						</p>
+          </div>
+        </div>
+
+        <div class="experiment row">
+					<div class="col-md-offset-2 col-md-8">
+            <h2>Мои статьи</h2>
+	          <p><a href="https://habrahabr.ru/post/280968/">Разбор архитектуры dillinger.io</a></p>
+	          <p><a href="https://ifmo.su/article/18">Жизненный цикл задач в проекте CodeX</a></p>
+	          <p><a href="https://ifmo.su/article/21">Почему блог вредит статьям</a> (она положила <a href="/lispress">начало этому блогу</a>)</p>
+					</div>
+        </div>
+
+        <div class="experiment row">
+					<div class="col-md-offset-2 col-md-8">
+            <h2>Всякое</h2>
+	          <p><a href="/text/goal-webinar">Конспект вебинара первого вебинара школы редакторов</a> включает упражнение для улучшения полезности текста</p>
+	          <!-- <p><a href="/poleznyashki">Полезняшки</a></p> -->
+					</div>
+        </div>
+
+        <footer class="row">
+          <div class="col-md-offset-2 col-sm-8">
+              <h2>Интересно?</h2>
+              <p>
+                  {{ .Site.Params.description | markdownify}}
+                  {{ partial "social" . }}
+              </p>
+          </div>
+        </footer>
+			</div>
+
+      {{ partial "analytic.html" . }}
+    </body>
+</html>
