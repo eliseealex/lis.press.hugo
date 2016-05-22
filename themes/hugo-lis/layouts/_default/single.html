@@ -40,8 +40,22 @@
 
                     <div class="col-md-offset-2 col-md-7 post-body">
 
+                        <section id="post-body">
+
+                            {{ if .Params.projectroadmap }}
+                            <div class="blog-info">
+                            Для создания продуктов я использую короткие итерации.<br>
+                            Я называю их <b>экспериментами</b>.<br>
+                            Об одном из таких экспериментов я рассказываю в этой секции.<br>
+                            </div>
+                            {{ end }}
+
+
+                            {{ .Content }}
+                        </section>
+
                         {{ if and .Site.Params.enablePath .Params.sidebarhistory }}
-                            <div class="factoid">
+                            <div class="factoid factoid-top">
                                 {{ range where .Site.Pages.ByDate "Section" .Section }}
                                      <p>Шаг {{ .Params.step }} <br><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                                 {{ end }}
@@ -50,22 +64,16 @@
                             </div>
                         {{ end }}
 
-                        <section id="post-body">
-                            {{ .Content }}
-                        </section>
-                    </div>
-
-                    {{ if .Params.projectroadmap }}
-                      <div class="col-md-offset-2 col-md-7 post-body">
-                        {{ range where .Site.Pages.ByDate "Section" .Params.projectroadmap }}
-                            <div class="col-sm-6 experiment-step">
-                                <p>Шаг {{ .Params.step }}</p>
-                                <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-                                <p>{{ .Description }}</p>
-                            </div>
+                        {{ if .Params.projectroadmap }}
+                          <div class="factoid factoid-top">
+                            {{ range where .Site.Pages.ByDate "Section" .Params.projectroadmap }}
+                                Шаг {{ .Params.step }}<br>
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                <p>{{ .Description }}</p><br>
+                            {{ end }}
+                          </div>
                         {{ end }}
-                      </div>
-                    {{ end }}
+                    </div>
                 </article>
                 {{ partial "article-footer.html" . }}
                 {{ partial "analytic.html" . }}

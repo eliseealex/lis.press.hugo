@@ -1,14 +1,19 @@
- <p>
-        {{ if .Site.Params.authorTwitter }}
-            <p><a href="https://twitter.com/{{ .Site.Params.authorTwitter }}"><i class="fa fa-twitter"></i> @{{ .Site.Params.authorTwitter }}</a></p>
-        {{ end }}
+<p>
 
-        {{ if .Site.Params.authorEmail }}
-            <p>
-            	<a href="mailto:{{ .Site.Params.authorEmail }}?Subject={{ .Site.Title }}" rel="nofollow">
-            		<i class="fa fa-envelope"></i> {{ .Site.Params.authorEmail }}
-            	</a>
-        	</p>
-        {{ end }}
+  {{ if .Site.Params.authorEmail }}
+  <p>
+    <a href="mailto:{{ .Site.Params.authorEmail }}?Subject={{ .Site.Title }}" rel="nofollow">
+      <i class="fa fa-envelope"></i> {{ .Site.Params.authorEmail }}
+    </a>
+  </p>
+  {{ end }}
 
-    </p>
+  {{ if .Site.Params.authorGithub }}
+  <p><a href="https://github.com/{{ .Site.Params.authorGithub }}"><i class="fa fa-github"></i> {{ .Site.Params.authorGithub }}</a></p>
+  {{ end }}
+
+  {{ if .Site.Params.authorTwitter }}
+  <p><a href="https://twitter.com/{{ .Site.Params.authorTwitter }}"><i class="fa fa-twitter"></i> @{{ .Site.Params.authorTwitter }}</a></p>
+  {{ end }}
+
+</p>
